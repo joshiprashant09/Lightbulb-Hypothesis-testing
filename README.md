@@ -14,14 +14,15 @@ CSS (for basic styling)
 1) Install the required packages: Make sure you have Python installed on your machine. You can install the required packages using the following command:
    pip install Flask pandas numpy scipy
 2) Run the Flask Application: To start the application, run the following command:
-   python app.py
+   python lightbulb.py
 3) Access the Application: Open your browser and navigate to http://localhost:5001.
 
 # Project Structure
 .
-├── app.py              
+├── lightbulb.py              
 ├── templates
 │   ├── index.html       
 │   ├── result.html      
-├── static               
+├── static       
+│   ├── style.css
 └── README.md  
