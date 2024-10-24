@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Analysis Result</title>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #151515;
+        color: #d6dbe0;
+        margin-left: 20px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      body > div {
+        background-color: #fff;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        padding: 2rem 3rem;
+        border-radius: 10px;
+        max-width: 700px;
+        width: 100%;
+        margin: 2rem;
+        text-align: left;
+        transition: transform 0.3s ease;
+      }
+
+      h2 {
+        color: #a071fe;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 3px solid #a071fe;
+        padding-bottom: 0.5rem;
+        letter-spacing: 1px;
+      }
+
+      h3 {
+        color: #81f2ff;
+        font-size: 1.75rem;
+        margin-top: 2rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin: 1rem 0;
+        color: #acacac;
+      }
+
+      /* Bold Text */
+      strong {
+        color: #ff7e2e;
+        transition: 0.7s;
+      }
+
+      h3:hover,
+      strong:hover {
+        color: #ffdf5e;
+      }
+
+      p:hover {
+        color: #ffffff;
+      }
+
+      @media (max-width: 768px) {
+        body > div {
+          padding: 1.5rem 2rem;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Statistical Analysis Result</h2>
+
+    <p><strong>Null Hypothesis (H0):</strong> {{ null_hypothesis }}</p>
+    <p><strong>Alternate Hypothesis (H1):</strong> {{ alt_hypothesis }}</p>
+
+    <p><strong>Sample Mean:</strong> {{ sample_mean }}</p>
+    <p><strong>Sample Standard Deviation:</strong> {{ sample_std }}</p>
+    <p><strong>t-calculated:</strong> {{ t_statistic }}</p>
+    <p><strong>t-tabulated Value:</strong> {{ t_critical }}</p>
+
+    <h3>Conclusion:</h3>
+    <p>{{ result }}</p>
+  </body>
+</html>
